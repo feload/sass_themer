@@ -1,0 +1,19 @@
+// #####################################################
+// Themer
+// #####################################################
+
+//////////////////////////////////////////////////////////////
+// Core functionality (do not touch) /////////////////////////
+//////////////////////////////////////////////////////////////
+// This function will return true$sites: (defaults, hometribe, redman);
+// false depending on wheter the site is defined in $sites list or not.
+@function contains($sites, $site) {
+   @return (null != index($sites, $site));
+}
+
+// This function will return de properties selected according to the site index.
+@function pick($site_index, $props...){
+  @return nth($props, $site_index);
+}
+
+$site_index: if(contains($sites, $site), index($sites, $site), 1);

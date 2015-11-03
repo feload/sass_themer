@@ -1,0 +1,7 @@
+$background: pick($site_index, #000, #95F18F, #E7143F);
+
+$darker10: darker(#111, 10%);
+$darker50: darker(#111, 50%);
+$darker100: darker(#111, 100%);
+$background_lyt: pick($site_index, $darker10, $darker50, $darker100);
+$font_family: pick($site_index, 'Arial', 'Verdana', 'Tahoma');
